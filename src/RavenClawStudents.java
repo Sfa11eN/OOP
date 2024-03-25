@@ -1,10 +1,11 @@
-public class RavenClawStudents {
+public class RavenClawStudents extends Hogwarts {
     private int smart;
     private int wise;
     private int witty;
     private int fullOfCreativity;
 
-    public RavenClawStudents(int smart, int wise, int witty, int fullOfCreativity) {
+    public RavenClawStudents(String name, int magicPower, int transgressionDistance, int smart, int wise, int witty, int fullOfCreativity) {
+        super(name, magicPower, transgressionDistance);
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;
@@ -45,11 +46,13 @@ public class RavenClawStudents {
 
     @Override
     public String toString() {
-        return "RavenClawStudents{" +
+        return getName()
+                + "Магическая Сила" + getMagicPower()
+                + "Дальность трансмогрификации" + getTransgressionDistance() +
+                "RavenClawStudents{" +
                 "smart=" + smart +
                 ", wise=" + wise +
                 ", witty=" + witty +
-                ", fullOfCreativity=" + fullOfCreativity +
-                '}';
+                ", fullOfCreativity=" + fullOfCreativity;
     }
 }
