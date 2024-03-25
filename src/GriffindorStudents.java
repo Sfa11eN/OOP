@@ -34,14 +34,26 @@ public class GriffindorStudents extends Hogwarts {
         this.bravery = bravery;
     }
 
+    public void compare(GriffindorStudents second) {
+        int firstSum = this.getBravery() + this.getHonor() + this.getNobility();
+        int secondSum = second.getBravery() + second.getHonor() + second.getNobility();
+        if (firstSum > secondSum) {
+            System.out.println(this.getName() + " лучший Гриффиндорец чем " + second.getName());
+        } else if (secondSum > firstSum) {
+            System.out.println(second.getName() + " лучший гриффиндорец чем " + this.getName());
+        } else {
+            System.out.println(this.getName() + " и " + second.getName() + "равны");
+        }
+    }
+
     @Override
-    public String       toString() {
-        return getName()
-                + "Магическая Сила" + getMagicPower()
-                + "Дальность трансмогрификации" + getTransgressionDistance() +
-                "GriffindorStudents{" +
-                "nobility=" + nobility +
-                ", honor=" + honor +
-                ", bravery=" + bravery;
+    public String toString() {
+        return getName()+" "
+                + " Магическая Сила=" + getMagicPower()
+                + " Дальность трансгрессирования=" + getTransgressionDistance() +
+                " GriffindorStudents{" +
+                " ,благородство=" + nobility +
+                ", честь=" + honor +
+                ", храбрость=" + bravery;
     }
 }

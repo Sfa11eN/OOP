@@ -43,16 +43,27 @@ public class RavenClawStudents extends Hogwarts {
     public void setFullOfCreativity(int fullOfCreativity) {
         this.fullOfCreativity = fullOfCreativity;
     }
+    public void compare(RavenClawStudents second){
+        int firstSum = this.getSmart() + this.getWise() + this.getWitty()+ this.getFullOfCreativity();
+        int secondSum = second.getSmart() + second.getWise() +second.getWitty() + second.getFullOfCreativity();
+        if (firstSum > secondSum) {
+            System.out.println(this.getName() + " лучший Когтевранец чем " + second.getName());
+        } else if (secondSum > firstSum) {
+            System.out.println(second.getName() + " лучший Когтевранец чем " + this.getName());
+        } else {
+            System.out.println(this.getName() + " и " + second.getName() + "равны");
+        }
+    }
 
     @Override
     public String toString() {
-        return getName()
-                + "Магическая Сила" + getMagicPower()
-                + "Дальность трансмогрификации" + getTransgressionDistance() +
-                "RavenClawStudents{" +
-                "smart=" + smart +
-                ", wise=" + wise +
-                ", witty=" + witty +
-                ", fullOfCreativity=" + fullOfCreativity;
+        return getName()+" "
+                + " Магическая Сила=" + getMagicPower()
+                + " Дальность трансгрессирования=" + getTransgressionDistance() +
+                " RavenClawStudents{" +
+                " ум=" + smart +
+                ", мудрость=" + wise +
+                ", остроумие=" + witty +
+                ", творческая составляющая=" + fullOfCreativity;
     }
 }

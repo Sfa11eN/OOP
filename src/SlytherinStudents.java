@@ -53,17 +53,28 @@ public class SlytherinStudents extends Hogwarts {
     public void setThirstForPower(int thirstForPower) {
         this.thirstForPower = thirstForPower;
     }
+    public void compare(SlytherinStudents second){
+        int firstSum = this.getCunning() + this.getDetermination() + this.getAmbition()+ this.getResourcefulness()+this.getThirstForPower();
+        int secondSum = second.getCunning() + second.getDetermination() + second.getAmbition()+ second.getResourcefulness()+second.getThirstForPower();
+        if (firstSum > secondSum) {
+            System.out.println(this.getName() + " лучший Слизеринец чем " + second.getName());
+        } else if (secondSum > firstSum) {
+            System.out.println(second.getName() + " лучший Слизеринец чем " + this.getName());
+        } else {
+            System.out.println(this.getName() + " и " + second.getName() + "равны");
+        }
+    }
 
     @Override
     public String toString() {
-        return getName()
-                + "Магическая Сила" + getMagicPower()
-                + "Дальность трансмогрификации" + getTransgressionDistance() +
-                "SlytherinStudents{" +
-                "cunning=" + cunning +
-                ", determination=" + determination +
-                ", ambition=" + ambition +
-                ", resourcefulness=" + resourcefulness +
-                ", thirstForPower=" + thirstForPower;
+        return getName()+" "
+                + " Магическая Сила=" + getMagicPower()
+                + " Дальность трансгрессирования=" + getTransgressionDistance() +
+                " SlytherinStudents{" +
+                " хитрость=" + cunning +
+                ", решительность=" + determination +
+                ", амбициозность=" + ambition +
+                ", находчивость=" + resourcefulness +
+                ", жажда власти=" + thirstForPower;
     }
 }
